@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://android.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/colorSurface">
+
+
+
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Новая задача"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Дисциплина (например: Сопромат, Вышмат)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_task_discipline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Заголовок задачи">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_task_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="24dp"
+        android:hint="Полное описание и условие задачи">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_task_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:inputType="textMultiLine"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/iv_task_create_preview"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginBottom="12dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:background="#E5E7EB"
+        android:contentDescription="Картинка условия" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_task_attach_photo"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:text="Прикрепить картинку к условию"
+        app:cornerRadius="12dp"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Критерии оценки решения (заметка для проверки)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_task_criteria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLines="3"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save_task"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Опубликовать"
+        app:cornerRadius="12dp"/>
+</LinearLayout>
